@@ -13,7 +13,7 @@ fs.promises.writeFile(filePath, '').then(() => {
   console.log('Введите текст');
   line.on('line', async (input) => {
     if (input === 'exit') {
-      console.log('До свидания!');
+      console.log('Прощайте');
       rl.close();
     } else {
       await fs.promises.appendFile(filePath, input + '\n');

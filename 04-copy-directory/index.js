@@ -5,10 +5,6 @@ const newDirPath = path.join(__dirname, 'files-copy');
 const dirPath = path.join(__dirname, 'files');
 
 fs.rm(newDirPath, { recursive: true }, (err) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
   fs.mkdir(newDirPath, () => {
     fs.readdir(dirPath, (err, files) => {
       if (err) {
