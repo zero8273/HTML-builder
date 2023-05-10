@@ -11,7 +11,7 @@ fs.readdir(dirPath, (err, files) => {
     fs.stat(fileNow, (err, status) => {
       if (status.isFile()) {
         const { name, ext } = path.parse(file);
-        console.log(`${name} - ${ext.slice(1)}`);
+        console.log(`${name} - ${ext.slice(1)} - ${status.size} byte`);
       } else {
       }
     });
